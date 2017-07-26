@@ -1,0 +1,36 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import sys 
+import string
+
+
+x = [ ]
+y = [ ]
+
+
+f = open('dates.txt', 'r')
+for line in f.readlines():
+    x.append(float(line.rstrip('/n')))
+        
+f = open('apple.txt', 'r') 
+for line in f.readlines(): 
+    y.append(float(line.rstrip('\n')))
+    
+
+
+yAxisSize = max(y)
+yMinSize = min(y)
+xAxisSize = len(x)
+
+
+plt.title('APPL Stock Chart') 
+plt.xlabel('time (per day)') 
+plt.ylabel('Stock Price (Close)')
+
+plt.ylim(yMinSize,yAxisSize) 
+plt.xlim(0,xAxisSize)
+
+
+
+plt.plot(x,y,'-') 
+plt.show()
