@@ -398,7 +398,7 @@ if __name__ == "__main__":
 
 
     client = ClientCommService(clientId)
-    host = str(raw_input("Enter the server id"))
+    host = str(raw_input("Enter the server id" /n))
     client.initCommClient(host, echoHello)
     #dic = {'src' : clientId, 'stockName' : 'Apple', 'date' : '2016/1/1', 'shareCount' : '10'}
 
